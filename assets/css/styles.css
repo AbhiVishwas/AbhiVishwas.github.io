@@ -69,7 +69,7 @@ nav {
 }
 
 nav h1 {
-  color: var(--primary-color);
+  color: #ffcc99;
 }
 
 nav a {
@@ -309,7 +309,7 @@ nav ul li {
 
 /* Footer section */
 footer {
-  background-color: var(--bg-color);
+  background-color: #ffcc99;
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
