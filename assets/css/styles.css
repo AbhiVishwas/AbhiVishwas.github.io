@@ -64,12 +64,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: #ff1a1a;
+  background-color: #ff6666;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav h1 {
-  color: #000000;
+  color: #ffffff;
 }
 
 nav a {
@@ -173,7 +173,7 @@ nav ul li {
 
 /* Projects section */
 .projects {
-  background-color: #ff9999;
+  background-color: #ff8080;
   padding: 32px 0;
   margin-top: 2rem;
 }
@@ -309,7 +309,7 @@ nav ul li {
 
 /* Footer section */
 footer {
-  background-color: #ff1a1a;
+  background-color: #ff6666;
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
