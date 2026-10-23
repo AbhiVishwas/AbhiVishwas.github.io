@@ -8,11 +8,19 @@
 <meta property="og:title" content="Abhi Vishwasrao">
 <meta property="og:description" content="Enterprise sales, builder, and community organizer in the East Bay.">
 <meta property="og:url" content="https://abhivishwas.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://abhivishwas.github.io/assets/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abhi Vishwasrao smiling, next to the words: Hey, it's Abhi. How have you been?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://abhivishwas.github.io/assets/images/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2323143A'/><text x='50%' y='58%' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='34' fill='%23F2A516'>AV</text></svg>">
 <link rel="stylesheet" href="assets/css/styles.css">
+<script data-goatcounter="https://abhivishwas.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -20,7 +28,7 @@
   <header class="top">
     <a class="mark" href="#">Abhi Vishwasrao</a>
     <nav aria-label="Sections">
-      <a href="#record">Track record</a>
+      <a href="#record" class="hide-sm">Track record</a>
       <a href="#building" class="hide-sm">Building</a>
       <a href="#community" class="hide-sm">Community</a>
       <a href="life.html">Off the clock</a>
@@ -30,13 +38,36 @@
 
   <main>
     <section class="hero" aria-labelledby="hi">
-      <div class="call" id="call" role="status" aria-live="off"><span class="dot" aria-hidden="true"></span><span id="calltext">On the line 0:00</span></div>
-      <h1 id="hi">Hey, it's Abhi.<span class="line2">Got thirty seconds?</span></h1>
+      <div class="callerid" id="call">
+        <img src="assets/images/abhi.jpg" alt="Abhi, smiling, outdoors" width="56" height="56">
+        <div class="cid-text">
+          <span class="cid-name">Abhi Vishwasrao</span>
+          <span class="cid-status"><span class="dot" aria-hidden="true"></span><span id="calltext">On the line 0:00</span></span>
+        </div>
+        <button type="button" class="cid-btn" id="objbtn" aria-expanded="false" aria-controls="obj">Throw me an objection</button>
+      </div>
+      <div class="objections" id="obj" hidden>
+        <h2 class="obj-q" id="obj-h">Go ahead. Hit me with one.</h2>
+        <div class="obj-chips" role="group" aria-labelledby="obj-h">
+          <button type="button" data-o="resume">Just send me your resume.</button>
+          <button type="button" data-o="reps">We already have enough reps.</button>
+          <button type="button" data-o="numbers">What are your numbers?</button>
+          <button type="button" data-o="why">Why sales?</button>
+          <button type="button" data-o="no">Not interested.</button>
+        </div>
+        <div class="obj-answer" id="objanswer" hidden>
+          <p class="obj-you" id="objyou"></p>
+          <p class="obj-me"><span class="sr-only">Abhi: </span><span id="objtext" aria-live="polite"></span><span class="caret" aria-hidden="true"></span></p>
+          <a class="btn primary small" id="objcta" href="mailto:abhivishwas7@gmail.com" hidden>Email me</a>
+        </div>
+      </div>
+      <h1 id="hi">Hey, it's Abhi.<span class="line2">How have you been?</span></h1>
       <p class="lede">I sell enterprise software, build things with code, and organize people around causes worth showing up for. Based in the East Bay.</p>
       <div class="actions">
         <a class="btn primary" href="https://www.linkedin.com/in/abhivishwas/">Connect on LinkedIn</a>
-        <a class="btn ghost" href="#record">See the track record</a>
+        <a class="btn ghost" href="mailto:abhivishwas7@gmail.com">Email me</a>
       </div>
+
     </section>
 
     <section class="block" aria-labelledby="short">
@@ -119,12 +150,6 @@
             <p>An AI phone agent that picks up for card shops when they can't.</p>
           </article>
           <article class="build">
-            <span class="status">Taking bookings</span>
-            <h3>Moments! By AV</h3>
-            <p>My photo booth business, for school events, parties and everything in between.</p>
-            <a class="more" href="https://linktr.ee/momentsbyav">Book a booth</a>
-          </article>
-          <article class="build">
             <span class="status">In the works</span>
             <h3>Clarity</h3>
             <p>AI sales coaching. Upload a call recording and get notes on what to try next time.</p>
@@ -136,7 +161,26 @@
             <p>An AI cold email writer. I sent a lot of cold emails, so I figured I'd make it easier.</p>
             <a class="more" href="https://github.com/AbhiVishwas">Find it on GitHub</a>
           </article>
-          <article class="build">
+          <article class="build moments">
+            <div class="moments-text">
+              <span class="status">Taking bookings</span>
+              <h3>Moments! By AV</h3>
+              <p>My photo booth business, for school events, parties and everything in between.</p>
+              <div class="moments-actions">
+                <a class="more" href="https://linktr.ee/momentsbyav">Book a booth</a>
+                <button type="button" class="print-btn" id="printbtn">Print another strip</button>
+              </div>
+            </div>
+            <div class="booth" aria-label="Sample photo strips from Moments! By AV">
+              <div class="slot" aria-hidden="true"></div>
+              <div class="strip-window">
+                <img class="strip is-on" src="assets/images/strip-party.jpg" alt="Photo strip from a 60th birthday party: a group of friends laughing in front of a gold backdrop" width="400" height="1200">
+                <img class="strip" src="assets/images/strip-goodvibes.jpg" alt="Photo strip with a retro Good Vibes frame, hearts and daisies" width="262" height="724" loading="lazy">
+                <img class="strip" src="assets/images/strip-halloween.jpg" alt="Photo strip with a Happy Halloween frame, kids in witch costumes" width="258" height="726" loading="lazy">
+              </div>
+            </div>
+          </article>
+          <article class="build wide">
             <span class="status">Ongoing</span>
             <h3>Writing</h3>
             <p>Manager's Path to Excellence, on Medium.</p>
@@ -181,35 +225,21 @@
 
     <section class="contact" id="contact" aria-labelledby="contact-h">
       <h2 id="contact-h">Thanks for staying on the line.</h2>
-      <p>I'm open to Account Executive roles and always up for talking sales, AI or nonprofit work. LinkedIn is the fastest way to reach me.</p>
+      <p>I'm open to Account Executive roles and always up for talking sales, AI or nonprofit work. Message me on LinkedIn or email <a href="mailto:abhivishwas7@gmail.com">abhivishwas7@gmail.com</a>. My resume is available on request.</p>
       <div class="actions">
         <a class="btn primary" href="https://www.linkedin.com/in/abhivishwas/">Message me on LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/AbhiVishwas">GitHub</a>
-        <a class="btn ghost" href="https://medium.com/@abhithegobi">Medium</a>
+        <a class="btn ghost" href="mailto:abhivishwas7@gmail.com">Email me</a>
+        <a class="btn ghost" href="mailto:abhivishwas7@gmail.com?subject=Resume%20request&amp;body=Hi%20Abhi%2C%20I%27d%20love%20a%20copy%20of%20your%20resume.%20I%27m%20with%20">Request my resume</a>
       </div>
     </section>
   </main>
 
   <footer>
     <span>Abhi Vishwasrao, East Bay, California</span>
-    <span>Stay bold.</span>
+    <span><a href="https://github.com/AbhiVishwas">GitHub</a> &nbsp; <a href="https://medium.com/@abhithegobi">Medium</a> &nbsp; Stay bold.</span>
   </footer>
 </div>
 
-<script>
-  (function () {
-    var el = document.getElementById('calltext');
-    var pill = document.getElementById('call');
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function done() { pill.classList.add('done'); el.textContent = '0:30. Still here? Let’s talk.'; }
-    if (reduce) { done(); return; }
-    var s = 0;
-    var t = setInterval(function () {
-      s++;
-      if (s >= 30) { clearInterval(t); done(); return; }
-      el.textContent = 'On the line 0:' + (s < 10 ? '0' + s : s);
-    }, 1000);
-  })();
-</script>
+<script src="assets/js/home.js" defer></script>
 </body>
 </html>
